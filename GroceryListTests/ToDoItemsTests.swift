@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import GroceryList
+import CoreLocation
 
 class ToDoItemsTests: XCTestCase {
     
@@ -41,5 +42,25 @@ class ToDoItemsTests: XCTestCase {
         let location = Location(name: "DummyLocation")
         let item = ToDoItem(title: "TestList", location: location)
         XCTAssertEqual(item.location?.name, location.name, "should set location")
+    }
+    
+    func test_EqualItems_AreEqual() {
+        let firstItem = ToDoItem(title: "ListItem")
+        let secondItem = ToDoItem(title: "ListItem")
+        
+        XCTAssertEqual(firstItem, secondItem)
+    }
+    
+    func test_Items_WhenLocationIsNotSame_AreUnequal() {
+        let firstItem = ToDoItem(title: "ListItem", location: Location(name: "Location1"))
+        let secondItem = ToDoItem(title: "ListItem", location: Location(name: "Location2"))
+        XCTAssertNotEqual(firstItem, secondItem, "Item with different location are not equal")
+    }
+    
+    func test_Items_WhenOneLocationIsNil_AreUnequal() {
+        let firstItem = ToDoItem(title: "ListItem", location: Location(name: "Location1", coordinate: nil))
+        let secondItem = ToDoItem(title: "ListItem", location: Location(name: "Location1", coordinate: CLLocationCoordinate2D(latitude: 1, longitude: 2)))
+        
+        XCTAssertNotEqual(firstItem, secondItem, "Items with different location are not equal")
     }
 }

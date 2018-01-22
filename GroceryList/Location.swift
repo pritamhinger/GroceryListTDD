@@ -9,7 +9,16 @@
 import Foundation
 import CoreLocation
 
-struct Location {
+struct Location: Equatable {
+    static func ==(lhs: Location, rhs: Location) -> Bool {
+        if lhs.coordinate?.latitude != rhs.coordinate?.latitude || lhs.coordinate?.longitude != rhs.coordinate?.longitude || lhs.name != rhs.name{
+            return false
+        }
+        
+        return true
+    }
+    
+    
     let name: String
     let coordinate: CLLocationCoordinate2D?
     

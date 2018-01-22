@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48074AF62016422F00B6094B /* ItemManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48074AF52016422F00B6094B /* ItemManagerTests.swift */; };
+		48074AF8201642E600B6094B /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48074AF7201642E600B6094B /* ItemManager.swift */; };
 		48176B672014F37B00C5F7FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48176B662014F37B00C5F7FA /* AppDelegate.swift */; };
 		48176B692014F37B00C5F7FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48176B682014F37B00C5F7FA /* ViewController.swift */; };
 		48176B6C2014F37B00C5F7FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48176B6A2014F37B00C5F7FA /* Main.storyboard */; };
@@ -29,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		48074AF52016422F00B6094B /* ItemManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemManagerTests.swift; sourceTree = "<group>"; };
+		48074AF7201642E600B6094B /* ItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemManager.swift; sourceTree = "<group>"; };
 		48176B632014F37B00C5F7FA /* GroceryList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48176B662014F37B00C5F7FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48176B682014F37B00C5F7FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 				48176B722014F37B00C5F7FA /* Info.plist */,
 				48176B882014FA0F00C5F7FA /* ToDoItem.swift */,
 				48176B8A2014FFF000C5F7FA /* Location.swift */,
+				48074AF7201642E600B6094B /* ItemManager.swift */,
 			);
 			path = GroceryList;
 			sourceTree = "<group>";
@@ -101,6 +106,7 @@
 				48176B7D2014F37B00C5F7FA /* Info.plist */,
 				48176B862014F90A00C5F7FA /* ToDoItemsTests.swift */,
 				48176B8C2015080D00C5F7FA /* LocationTests.swift */,
+				48074AF52016422F00B6094B /* ItemManagerTests.swift */,
 			);
 			path = GroceryListTests;
 			sourceTree = "<group>";
@@ -209,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48176B692014F37B00C5F7FA /* ViewController.swift in Sources */,
+				48074AF8201642E600B6094B /* ItemManager.swift in Sources */,
 				48176B892014FA0F00C5F7FA /* ToDoItem.swift in Sources */,
 				48176B8B2014FFF000C5F7FA /* Location.swift in Sources */,
 				48176B672014F37B00C5F7FA /* AppDelegate.swift in Sources */,
@@ -219,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48074AF62016422F00B6094B /* ItemManagerTests.swift in Sources */,
 				48176B8D2015080D00C5F7FA /* LocationTests.swift in Sources */,
 				48176B872014F90A00C5F7FA /* ToDoItemsTests.swift in Sources */,
 			);
