@@ -14,6 +14,18 @@ struct ToDoItem: Equatable{
             return false
         }
         
+        if lhs.timestamp != rhs.timestamp {
+            return false
+        }
+        
+        if lhs.itemDescription != rhs.itemDescription{
+            return false
+        }
+        
+        if lhs.title != rhs.title {
+            return false
+        }
+        
         return true
     }
     
