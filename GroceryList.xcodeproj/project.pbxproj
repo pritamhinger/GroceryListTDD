@@ -93,9 +93,7 @@
 				48176B6D2014F37B00C5F7FA /* Assets.xcassets */,
 				48176B6F2014F37B00C5F7FA /* LaunchScreen.storyboard */,
 				48176B722014F37B00C5F7FA /* Info.plist */,
-				48176B882014FA0F00C5F7FA /* ToDoItem.swift */,
-				48176B8A2014FFF000C5F7FA /* Location.swift */,
-				48074AF7201642E600B6094B /* ItemManager.swift */,
+				485F2A16201AF45000C39B61 /* Model */,
 			);
 			path = GroceryList;
 			sourceTree = "<group>";
@@ -104,11 +102,29 @@
 			isa = PBXGroup;
 			children = (
 				48176B7D2014F37B00C5F7FA /* Info.plist */,
+				485F2A17201AF46F00C39B61 /* Model */,
+			);
+			path = GroceryListTests;
+			sourceTree = "<group>";
+		};
+		485F2A16201AF45000C39B61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				48176B882014FA0F00C5F7FA /* ToDoItem.swift */,
+				48176B8A2014FFF000C5F7FA /* Location.swift */,
+				48074AF7201642E600B6094B /* ItemManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		485F2A17201AF46F00C39B61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				48176B862014F90A00C5F7FA /* ToDoItemsTests.swift */,
 				48176B8C2015080D00C5F7FA /* LocationTests.swift */,
 				48074AF52016422F00B6094B /* ItemManagerTests.swift */,
 			);
-			path = GroceryListTests;
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
