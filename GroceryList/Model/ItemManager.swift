@@ -31,8 +31,13 @@ class ItemManager {
     }
     
     func checkItem(at index: Int) {
-        doneItems.insert(item(at: index), at: index)
-        items.remove(at: index)
+        let item = items.remove(at: index)
+        doneItems.append(item)
+    }
+    
+    func unCheckItem(at index: Int) {
+        let item = doneItems.remove(at: index)
+        items.append(item)
     }
     
     func doneItem(at index: Int) -> ToDoItem {

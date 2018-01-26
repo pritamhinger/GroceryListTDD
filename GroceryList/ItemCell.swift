@@ -6,4 +6,10 @@
 //  Copyright © 2018 AppDevelapp. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class ItemCell: UITableViewCell {
+    func configCell(with item: ToDoItem){
+        
+    }
+}
