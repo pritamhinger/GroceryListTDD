@@ -22,6 +22,7 @@
 		485F2A1B201AFB4700C39B61 /* ItemListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485F2A1A201AFB4700C39B61 /* ItemListDataProvider.swift */; };
 		485F2A1D201B17CD00C39B61 /* ItemListDataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485F2A1C201B17CD00C39B61 /* ItemListDataProviderTests.swift */; };
 		48C7F618201B298B0035C172 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C7F617201B298B0035C172 /* ItemCell.swift */; };
+		48C7F61A201B7A070035C172 /* ItemCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C7F619201B7A070035C172 /* ItemCellTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		485F2A1A201AFB4700C39B61 /* ItemListDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListDataProvider.swift; sourceTree = "<group>"; };
 		485F2A1C201B17CD00C39B61 /* ItemListDataProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListDataProviderTests.swift; sourceTree = "<group>"; };
 		48C7F617201B298B0035C172 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		48C7F619201B7A070035C172 /* ItemCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCellTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				485F2A17201AF46F00C39B61 /* Model */,
 				485F2A18201AF51800C39B61 /* ItemListViewControllerTest.swift */,
 				485F2A1C201B17CD00C39B61 /* ItemListDataProviderTests.swift */,
+				48C7F619201B7A070035C172 /* ItemCellTests.swift */,
 			);
 			path = GroceryListTests;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48C7F61A201B7A070035C172 /* ItemCellTests.swift in Sources */,
 				485F2A1D201B17CD00C39B61 /* ItemListDataProviderTests.swift in Sources */,
 				48074AF62016422F00B6094B /* ItemManagerTests.swift in Sources */,
 				485F2A19201AF51800C39B61 /* ItemListViewControllerTest.swift in Sources */,

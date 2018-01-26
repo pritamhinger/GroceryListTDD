@@ -161,7 +161,7 @@ extension ItemListDataProviderTests{
     class MockCell: ItemCell {
         var cachedItem: ToDoItem?
         
-        override func configCell(with item: ToDoItem) {
+        override func configCell(with item: ToDoItem, checked: Bool = false) {
             cachedItem = item
         }
     }
