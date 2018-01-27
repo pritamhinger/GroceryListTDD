@@ -110,16 +110,12 @@
 			isa = PBXGroup;
 			children = (
 				48176B662014F37B00C5F7FA /* AppDelegate.swift */,
-				48176B682014F37B00C5F7FA /* ItemListViewController.swift */,
+				485F2A16201AF45000C39B61 /* Model */,
+				48C7F626201CAC3B0035C172 /* Controller */,
 				48176B6A2014F37B00C5F7FA /* Main.storyboard */,
 				48176B6D2014F37B00C5F7FA /* Assets.xcassets */,
 				48176B6F2014F37B00C5F7FA /* LaunchScreen.storyboard */,
 				48176B722014F37B00C5F7FA /* Info.plist */,
-				485F2A16201AF45000C39B61 /* Model */,
-				485F2A1A201AFB4700C39B61 /* ItemListDataProvider.swift */,
-				48C7F617201B298B0035C172 /* ItemCell.swift */,
-				48C7F61D201C721F0035C172 /* DetailViewController.swift */,
-				48C7F624201C86CD0035C172 /* InputViewController.swift */,
 			);
 			path = GroceryList;
 			sourceTree = "<group>";
@@ -129,11 +125,7 @@
 			children = (
 				48176B7D2014F37B00C5F7FA /* Info.plist */,
 				485F2A17201AF46F00C39B61 /* Model */,
-				485F2A18201AF51800C39B61 /* ItemListViewControllerTest.swift */,
-				485F2A1C201B17CD00C39B61 /* ItemListDataProviderTests.swift */,
-				48C7F619201B7A070035C172 /* ItemCellTests.swift */,
-				48C7F61B201C71790035C172 /* DetailViewControllerTests.swift */,
-				48C7F622201C86A40035C172 /* InputViewControllerTests.swift */,
+				48C7F627201CAC520035C172 /* Controller */,
 			);
 			path = GroceryListTests;
 			sourceTree = "<group>";
@@ -164,6 +156,30 @@
 				48C7F620201C792D0035C172 /* MapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		48C7F626201CAC3B0035C172 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				48176B682014F37B00C5F7FA /* ItemListViewController.swift */,
+				485F2A1A201AFB4700C39B61 /* ItemListDataProvider.swift */,
+				48C7F617201B298B0035C172 /* ItemCell.swift */,
+				48C7F61D201C721F0035C172 /* DetailViewController.swift */,
+				48C7F624201C86CD0035C172 /* InputViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		48C7F627201CAC520035C172 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				485F2A18201AF51800C39B61 /* ItemListViewControllerTest.swift */,
+				485F2A1C201B17CD00C39B61 /* ItemListDataProviderTests.swift */,
+				48C7F619201B7A070035C172 /* ItemCellTests.swift */,
+				48C7F61B201C71790035C172 /* DetailViewControllerTests.swift */,
+				48C7F622201C86A40035C172 /* InputViewControllerTests.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
