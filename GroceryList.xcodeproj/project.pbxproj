@@ -23,6 +23,9 @@
 		485F2A1D201B17CD00C39B61 /* ItemListDataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485F2A1C201B17CD00C39B61 /* ItemListDataProviderTests.swift */; };
 		48C7F618201B298B0035C172 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C7F617201B298B0035C172 /* ItemCell.swift */; };
 		48C7F61A201B7A070035C172 /* ItemCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C7F619201B7A070035C172 /* ItemCellTests.swift */; };
+		48C7F61C201C71790035C172 /* DetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C7F61B201C71790035C172 /* DetailViewControllerTests.swift */; };
+		48C7F61E201C721F0035C172 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C7F61D201C721F0035C172 /* DetailViewController.swift */; };
+		48C7F621201C792D0035C172 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C7F620201C792D0035C172 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 		485F2A1C201B17CD00C39B61 /* ItemListDataProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListDataProviderTests.swift; sourceTree = "<group>"; };
 		48C7F617201B298B0035C172 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		48C7F619201B7A070035C172 /* ItemCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCellTests.swift; sourceTree = "<group>"; };
+		48C7F61B201C71790035C172 /* DetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerTests.swift; sourceTree = "<group>"; };
+		48C7F61D201C721F0035C172 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		48C7F620201C792D0035C172 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48C7F621201C792D0035C172 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +89,7 @@
 				48176B652014F37B00C5F7FA /* GroceryList */,
 				48176B7A2014F37B00C5F7FA /* GroceryListTests */,
 				48176B642014F37B00C5F7FA /* Products */,
+				48C7F61F201C792C0035C172 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +114,7 @@
 				485F2A16201AF45000C39B61 /* Model */,
 				485F2A1A201AFB4700C39B61 /* ItemListDataProvider.swift */,
 				48C7F617201B298B0035C172 /* ItemCell.swift */,
+				48C7F61D201C721F0035C172 /* DetailViewController.swift */,
 			);
 			path = GroceryList;
 			sourceTree = "<group>";
@@ -118,6 +127,7 @@
 				485F2A18201AF51800C39B61 /* ItemListViewControllerTest.swift */,
 				485F2A1C201B17CD00C39B61 /* ItemListDataProviderTests.swift */,
 				48C7F619201B7A070035C172 /* ItemCellTests.swift */,
+				48C7F61B201C71790035C172 /* DetailViewControllerTests.swift */,
 			);
 			path = GroceryListTests;
 			sourceTree = "<group>";
@@ -140,6 +150,14 @@
 				48074AF52016422F00B6094B /* ItemManagerTests.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		48C7F61F201C792C0035C172 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48C7F620201C792D0035C172 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +211,11 @@
 					48176B622014F37B00C5F7FA = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					48176B762014F37B00C5F7FA = {
 						CreatedOnToolsVersion = 9.2;
@@ -252,6 +275,7 @@
 				48C7F618201B298B0035C172 /* ItemCell.swift in Sources */,
 				48176B8B2014FFF000C5F7FA /* Location.swift in Sources */,
 				48176B672014F37B00C5F7FA /* AppDelegate.swift in Sources */,
+				48C7F61E201C721F0035C172 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +287,7 @@
 				485F2A1D201B17CD00C39B61 /* ItemListDataProviderTests.swift in Sources */,
 				48074AF62016422F00B6094B /* ItemManagerTests.swift in Sources */,
 				485F2A19201AF51800C39B61 /* ItemListViewControllerTest.swift in Sources */,
+				48C7F61C201C71790035C172 /* DetailViewControllerTests.swift in Sources */,
 				48176B8D2015080D00C5F7FA /* LocationTests.swift in Sources */,
 				48176B872014F90A00C5F7FA /* ToDoItemsTests.swift in Sources */,
 			);
