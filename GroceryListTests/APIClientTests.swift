@@ -30,27 +30,23 @@ class APIClientTests: XCTestCase {
         let completion = { (token: Token?, error: Error?) in }
         sut.loginUser(withName: "phinger", password: "1234", completion: completion)
         
-        guard let url = mockUrlSession.url else{
-            XCTFail()
-            return
-        }
-        
-        let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true)
-        XCTAssertEqual(urlComponents?.host, "awesometodos.com")
+        XCTAssertEqual(mockUrlSession.urlComponents?.host, "awesometodos.com")
     }
     
-    func test_Login_UserExpextedPAth() {
+    func test_Login_UserExpextedPath() {
         
         let completion = { (token: Token?, error: Error?) in }
         sut.loginUser(withName: "phinger", password: "1234", completion: completion)
         
-        guard let url = mockUrlSession.url else{
-            XCTFail()
-            return
-        }
+        XCTAssertEqual(mockUrlSession.urlComponents?.path, "/login")
+    }
+    
+    func test_Login_UserExpextedQueryParams() {
         
-        let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true)
-        XCTAssertEqual(urlComponents?.path, "/login")
+        let completion = { (token: Token?, error: Error?) in }
+        sut.loginUser(withName: "phinger", password: "%&1234", completion: completion)
+        
+         XCTAssertEqual(mockUrlSession.urlComponents?.percentEncodedQuery, "username=phinger&password=%25%261234")
     }
 }
 
@@ -58,6 +54,12 @@ extension APIClientTests{
     class MockURLSession: SessionProtocol {
         
         var url: URL?
+        
+        var urlComponents: URLComponents?{
+            guard let url = url else { return nil }
+            return URLComponents(url: url, resolvingAgainstBaseURL: true)
+        }
+        
         func dataTask(with url:URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
             self.url = url
             return URLSession.shared.dataTask(with: url)

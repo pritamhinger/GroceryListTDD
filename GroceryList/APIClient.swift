@@ -12,7 +12,11 @@ class APIClient {
     lazy var session: SessionProtocol = URLSession.shared
     
     func loginUser(withName: String, password: String, completion: @escaping(Token?, Error?)-> Void) {
-        guard let url = URL(string: "https://awesometodos.com/login") else{ fatalError() }
+        
+        let query = "username=\(withName.parentEncoded)&password=\(password.parentEncoded)"
+        
+        guard let url = URL(string: "https://awesometodos.com/login?\(query)") else{ fatalError() }
+        
         _ = session.dataTask(with: url) { (data, response, error) in
             if let error = error{
                 print("Error logging in into the app", error)
@@ -27,6 +31,16 @@ class APIClient {
 
 extension URLSession : SessionProtocol{
     
+}
+
+extension String{
+    var parentEncoded:String{
+        let allowedCharacters = CharacterSet(
+            charactersIn:
+            "/%&=?$#+-~@<>|\\*,.()[]{}^!").inverted
+        guard let encodedString = self.addingPercentEncoding(withAllowedCharacters: allowedCharacters) else{ fatalError() }
+        return encodedString
+    }
 }
 
 protocol SessionProtocol {
