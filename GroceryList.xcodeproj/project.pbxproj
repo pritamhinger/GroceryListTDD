@@ -18,6 +18,8 @@
 		48176B892014FA0F00C5F7FA /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48176B882014FA0F00C5F7FA /* ToDoItem.swift */; };
 		48176B8B2014FFF000C5F7FA /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48176B8A2014FFF000C5F7FA /* Location.swift */; };
 		48176B8D2015080D00C5F7FA /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48176B8C2015080D00C5F7FA /* LocationTests.swift */; };
+		48361D8D20237BB600B9F8E9 /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48361D8C20237BB600B9F8E9 /* APIClientTests.swift */; };
+		48361D8F20237C8000B9F8E9 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48361D8E20237C8000B9F8E9 /* APIClient.swift */; };
 		485F2A19201AF51800C39B61 /* ItemListViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485F2A18201AF51800C39B61 /* ItemListViewControllerTest.swift */; };
 		485F2A1B201AFB4700C39B61 /* ItemListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485F2A1A201AFB4700C39B61 /* ItemListDataProvider.swift */; };
 		485F2A1D201B17CD00C39B61 /* ItemListDataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485F2A1C201B17CD00C39B61 /* ItemListDataProviderTests.swift */; };
@@ -28,6 +30,7 @@
 		48C7F621201C792D0035C172 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C7F620201C792D0035C172 /* MapKit.framework */; };
 		48C7F623201C86A40035C172 /* InputViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C7F622201C86A40035C172 /* InputViewControllerTests.swift */; };
 		48C7F625201C86CD0035C172 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C7F624201C86CD0035C172 /* InputViewController.swift */; };
+		48EE58FC20238266009211E4 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EE58FB20238266009211E4 /* Token.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,8 @@
 		48176B882014FA0F00C5F7FA /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		48176B8A2014FFF000C5F7FA /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		48176B8C2015080D00C5F7FA /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
+		48361D8C20237BB600B9F8E9 /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
+		48361D8E20237C8000B9F8E9 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		485F2A18201AF51800C39B61 /* ItemListViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewControllerTest.swift; sourceTree = "<group>"; };
 		485F2A1A201AFB4700C39B61 /* ItemListDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListDataProvider.swift; sourceTree = "<group>"; };
 		485F2A1C201B17CD00C39B61 /* ItemListDataProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListDataProviderTests.swift; sourceTree = "<group>"; };
@@ -66,6 +71,7 @@
 		48C7F620201C792D0035C172 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		48C7F622201C86A40035C172 /* InputViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewControllerTests.swift; sourceTree = "<group>"; };
 		48C7F624201C86CD0035C172 /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		48EE58FB20238266009211E4 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,8 @@
 				48176B6D2014F37B00C5F7FA /* Assets.xcassets */,
 				48176B6F2014F37B00C5F7FA /* LaunchScreen.storyboard */,
 				48176B722014F37B00C5F7FA /* Info.plist */,
+				48361D8E20237C8000B9F8E9 /* APIClient.swift */,
+				48EE58FB20238266009211E4 /* Token.swift */,
 			);
 			path = GroceryList;
 			sourceTree = "<group>";
@@ -126,6 +134,7 @@
 				48176B7D2014F37B00C5F7FA /* Info.plist */,
 				485F2A17201AF46F00C39B61 /* Model */,
 				48C7F627201CAC520035C172 /* Controller */,
+				48361D8C20237BB600B9F8E9 /* APIClientTests.swift */,
 			);
 			path = GroceryListTests;
 			sourceTree = "<group>";
@@ -293,9 +302,11 @@
 				48176B692014F37B00C5F7FA /* ItemListViewController.swift in Sources */,
 				485F2A1B201AFB4700C39B61 /* ItemListDataProvider.swift in Sources */,
 				48074AF8201642E600B6094B /* ItemManager.swift in Sources */,
+				48361D8F20237C8000B9F8E9 /* APIClient.swift in Sources */,
 				48176B892014FA0F00C5F7FA /* ToDoItem.swift in Sources */,
 				48C7F618201B298B0035C172 /* ItemCell.swift in Sources */,
 				48176B8B2014FFF000C5F7FA /* Location.swift in Sources */,
+				48EE58FC20238266009211E4 /* Token.swift in Sources */,
 				48176B672014F37B00C5F7FA /* AppDelegate.swift in Sources */,
 				48C7F625201C86CD0035C172 /* InputViewController.swift in Sources */,
 				48C7F61E201C721F0035C172 /* DetailViewController.swift in Sources */,
@@ -312,6 +323,7 @@
 				48C7F623201C86A40035C172 /* InputViewControllerTests.swift in Sources */,
 				485F2A19201AF51800C39B61 /* ItemListViewControllerTest.swift in Sources */,
 				48C7F61C201C71790035C172 /* DetailViewControllerTests.swift in Sources */,
+				48361D8D20237BB600B9F8E9 /* APIClientTests.swift in Sources */,
 				48176B8D2015080D00C5F7FA /* LocationTests.swift in Sources */,
 				48176B872014F90A00C5F7FA /* ToDoItemsTests.swift in Sources */,
 			);
