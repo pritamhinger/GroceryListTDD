@@ -17,15 +17,33 @@ class APIClient {
         
         guard let url = URL(string: "https://awesometodos.com/login?\(query)") else{ fatalError() }
         
-        _ = session.dataTask(with: url) { (data, response, error) in
+        session.dataTask(with: url) { (data, response, error) in
             if let error = error{
                 print("Error logging in into the app", error)
+                completion(nil, error)
                 return
             }
             
-            print(response ?? "")
-            print(data ?? "")
-        }
+            guard let data = data else {
+                completion(nil, WebServiceError.DataEmptyError)
+                return
+            }
+            
+            do{
+                let dict = try JSONSerialization.jsonObject(with: data, options: []) as? [String : String]
+                let token: Token?
+                if let tokenString = dict?["token"] {
+                    token = Token(id: tokenString)
+                }else{
+                    token = nil
+                }
+                
+                completion(token, nil)
+            }
+            catch let pasringError{
+                completion(nil, pasringError)
+            }
+        }.resume()
     }
 }
 
@@ -45,4 +63,8 @@ extension String{
 
 protocol SessionProtocol {
     func dataTask(with url:URL, completionHandler: @escaping(Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask
+}
+
+enum WebServiceError: Error {
+    case DataEmptyError
 }
